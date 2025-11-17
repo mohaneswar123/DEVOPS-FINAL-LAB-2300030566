@@ -26,15 +26,15 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v5
         with:
-          context: ./Groceries-Backend
-          file: ./FullStack/backend.Dockerfile
+          context: ./springbootproject
+          file: ./springbootproject/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-backend-before:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300030566-lab-backend:latest:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
         with:
-          context: ./HomeWork
-          file: ./FullStack/frontend.Dockerfile
+          context: ./reactapp
+          file: ./reactapp/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-frontend-before:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2300030566-lab-frontend:latest
